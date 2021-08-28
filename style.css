@@ -9,7 +9,7 @@
     --White: hsl(0, 0%, 100%);
     
     /* --- Neutral --- */
-    
+
     --Light-gray: hsl(0, 0%, 81%);
     --Light-grayish-blue: hsl(210, 46%, 95%);
 }
@@ -24,6 +24,7 @@
 body {
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
 }
 
 .container {
@@ -41,9 +42,18 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr;
 
-    border: 1px solid green; 
+    width:80vw;
+    max-width: 1000px;
+
+    flex-wrap: wrap;
+  
+    gap: 2rem;
+
+    height: 90%;
+
+    border: 2px solid green; 
 
     grid-template-areas: 
     "daniel daniel jonathan kira"
@@ -53,31 +63,108 @@ body {
 
 .daniel {
     grid-area: daniel;
+    background-color: var(--Moderate-violet);
 }
 
 .jeanette {
     grid-area: jeanette;
+    background-color: var(--White);
 }
 
 .jonathan {
     grid-area: jonathan;
+    background-color: var(--Very-dark-grayish-blue);
 }
 
 .patrick {
     grid-area: patrick;
+    background-color: var(--Very-dark-blackish-blue);
 }
 
 .kira {
     grid-area: kira;
+    background-color: var(--White);
 }
 
-/* --- Cards --- */
+/* --- All Cards-- */
 .profile {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
 }
+
+.profile .personal-photo {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.profile span {
+    font-weight: 500;
+    color: hsl(0, 0%, 81%, 50%);
+}
+
+.quote {
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* ---man--- */
+.man {
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.man .profile .personal-photo {
+    border: 3px solid var(--Moderate-violet);
+}
+.man .profile h3 {
+    color: var(--Light-gray);
+    font-weight: 500;
+}
+
+.man .quote {
+    color: var(--Light-grayish-blue);
+}
+
+.man .description {
+    color: hsl(0, 0%, 81%, 70%);
+    font-weight: 500;
+}
+
+/* ---woman--- */
+.women {
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.women .profile h3 {
+    color: var(--Very-dark-grayish-blue);
+    font-family: 500;
+}
+
+.women .profile span {
+    color: hsl(219, 29%, 14%, 50%)
+}
+
+.women .quote {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.women .description {
+    color: hsl(219, 29%, 14%, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
