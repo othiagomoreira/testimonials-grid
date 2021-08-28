@@ -1,0 +1,90 @@
+/* --- Variables --- */
+:root {
+
+    /* --- Primary --- */
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    
+    /* --- Neutral --- */
+    
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* --- Geral ---*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    border: 1px solid red;
+}
+
+
+/* --- Grid Areas --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+
+    border: 1px solid green; 
+
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira"
+    ;
+}
+
+.daniel {
+    grid-area: daniel;
+}
+
+.jeanette {
+    grid-area: jeanette;
+}
+
+.jonathan {
+    grid-area: jonathan;
+}
+
+.patrick {
+    grid-area: patrick;
+}
+
+.kira {
+    grid-area: kira;
+}
+
+/* --- Cards --- */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
