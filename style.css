@@ -25,16 +25,17 @@ body {
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-color: var(--Light-grayish-blue);
+    width: 100%;
+    height: 100%;
 }
+
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    height: 100vh;
-
-    border: 1px solid red;
+   
+    padding: 30px 0;
 }
 
 
@@ -42,48 +43,47 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
 
-    width:80vw;
-    max-width: 1000px;
-
-    flex-wrap: wrap;
-  
-    gap: 2rem;
-
-    height: 90%;
-
-    border: 2px solid green; 
+    width:95vw;
+    max-width: 1100px;
+ 
+    gap: 1rem;
+    /* border: 1px solid green;  */
 
     grid-template-areas: 
-    "daniel daniel jonathan kira"
-    "jeanette patrick patrick kira"
+    "d d j k"
+    "a p p k"
     ;
 }
 
 .daniel {
-    grid-area: daniel;
+    grid-area: d;
     background-color: var(--Moderate-violet);
+    
 }
 
 .jeanette {
-    grid-area: jeanette;
+    grid-area: a;
     background-color: var(--White);
+    
 }
 
 .jonathan {
-    grid-area: jonathan;
+    grid-area: j;
     background-color: var(--Very-dark-grayish-blue);
 }
 
 .patrick {
-    grid-area: patrick;
+    grid-area: p;
     background-color: var(--Very-dark-blackish-blue);
+   
 }
 
 .kira {
-    grid-area: kira;
+    grid-area: k;
     background-color: var(--White);
+
 }
 
 /* --- All Cards-- */
@@ -110,15 +110,16 @@ body {
     padding: 1rem 0;
 }
 
+.daniel .personal-photo,
+.patrick .personal-photo {
+    border: 2px solid hsl(263, 90%, 69%);
+}
 /* ---man--- */
 .man {
     padding: 2rem;
     border-radius: 1rem;
 }
 
-.man .profile .personal-photo {
-    border: 3px solid var(--Moderate-violet);
-}
 .man .profile h3 {
     color: var(--Light-gray);
     font-weight: 500;
@@ -156,22 +157,26 @@ body {
     color: hsl(219, 29%, 14%, 0.5);
 }
 
+/* ---Responsivo--- */
+
+@media (max-width: 990px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 300px);
+        grid-template-areas: 
+        "k k k k k k"
+        "d d d d a a"
+        "p p p p j j";  
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-.attribution { 
-    font-size: 11px; text-align: center; 
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%); 
-}
+@media (max-width: 740px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+
+        width: 90vw;
+    }
+} 

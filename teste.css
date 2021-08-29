@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    border: 1px solid green;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2rem;
+
+    border: 1px solid red;
+
+    width: 90vw;
+    max-width: 1000px;
+
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+  
+  .grid > div {
+    background-color: green;
+    height: 200px;
+  }
